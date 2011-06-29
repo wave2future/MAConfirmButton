@@ -10,22 +10,14 @@
 
 @class MAConfirmButtonOverlay;
 
-@interface MAConfirmButton : UIButton {
+@interface MAConfirmButton : UIButton
 
-@private
-	BOOL selected;
-	BOOL confirmed;
-	CALayer *colorLayer;
-	CALayer *darkenLayer;
-	UIButton *cancelOverlay;
-}
-
-+ (MAConfirmButton *)buttonWithTitle:(NSString *)titleString confirm:(NSString *)confirmString;
-+ (MAConfirmButton *)buttonWithDisabledTitle:(NSString *)disabledString;
-- (id)initWithTitle:(NSString *)titleString confirm:(NSString *)confirmString;
-- (id)initWithDisabledTitle:(NSString *)disabledString;
-- (void)disableWithTitle:(NSString *)disabledString;
-- (void)setAnchor:(CGPoint)anchor;
-- (void)setTintColor:(UIColor *)color;
++ (MAConfirmButton*) buttonWithTitle: (NSString*) titleString confirm: (NSString*) confirmString;
++ (MAConfirmButton*) buttonWithDisabledTitle: (NSString*) disabledString;
+- (id) initWithTitle: (NSString*) titleString confirm: (NSString*) confirmString;
+- (id) initWithDisabledTitle: (NSString*) disabledString;
+- (void) disableWithTitle: (NSString*) disabledString;
+- (void) setAnchor: (CGPoint) anchor;
+- (void) setTintColor: (UIColor*) color;
 
 @end
